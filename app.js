@@ -14,12 +14,12 @@ app.get("/", (req, res) => {
 
 
 app.get("/:id", (req, res) => {
-    for (var i = 0; i < staff.data.length; i++) {
-        if (staff.data[i].id == req.params.id) {
-            return res.json(staff.data[i]);
+    for (var i = 0; i < staff.staffers.length; i++) {
+        if (staff.staffers[i].id == req.params.id) {
+            return res.json(staff.staffers[i]);
         }
     }
-    if(!staff.data[i]) {
+    if(!staff.staffers[i]) {
         res.status = 404;
         res.json({error: {message: "No record found!"}
         });

@@ -1,5 +1,5 @@
 module.exports = {
-    "staff": [{
+    "staffers": [{
         id: 1,
         fullName: "Kyle Coberly",
         title: "Faculty Director",
