@@ -5,13 +5,9 @@ const staff = require("./data/staff");
 
 app.use(cors());
 
-
-
 app.get("/", (req, res) => {
     res.json(staff);
 });
-
-
 
 app.get("/:id", (req, res) => {
     for (var i = 0; i < staff.staffers.length; i++) {
@@ -24,9 +20,7 @@ app.get("/:id", (req, res) => {
         res.json({error: {message: "No record found!"}
         });
     }
-    // res.json(haveItem);
 });
-
 
 app.listen(process.env.PORT || 3000, () => {
     console.log("TS-3 Version-2 on localhost:3000");
