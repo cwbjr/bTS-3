@@ -17,7 +17,8 @@ app.get("/:id", (req, res) => {
     }
     if(!staff.staffers[i]) {
         // res.status = 404;
-        res.status(404).send("message: No record found!");
+        const message = res.json({error: {message: "No record found!"} });
+        res.status(404).send(message);
         res.json({error: {message: "No record found!"}
         });
     }
