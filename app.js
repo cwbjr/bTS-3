@@ -19,8 +19,8 @@ app.get("/:id", (req, res) => {
         // res.status = 404;
         const message = res.json({error: {message: "No record found!"} });
         res.status(404).send(message);
-        res.json({error: {message: "No record found!"}
-        });
+        // res.json({error: {message: "No record found!"}
+        // });
     }
 });
 
