@@ -15,13 +15,13 @@ app.get("/:id", (req, res) => {
             return res.json(staff.staffers[i]);
         }
     }
-    // if(!staff.staffers[i]) {
-    //     // res.status = 404;
-    //     const message = res.json({error: {message: "No record found!"} });
-    //     res.status(404).send(message);
-        // res.json({error: {message: "No record found!"}
-        // });
-    // }
+    if(!staff.staffers[i]) {
+        res.status(404);
+        // const message = res.json({error: {message: "No record found!"} });
+        // res.status(404).send(message);
+        res.json({error: {message: "No record found!"}
+        });
+    }
 });
 
 app.use(function(req, res, next){
