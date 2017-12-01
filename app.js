@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 app.get("/:id", (req, res) => {
     for (var i = 0; i < staff.staffers.length; i++) {
         if (staff.staffers[i].id == req.params.id) {
-            return res.json(staff.staffers[i]);
+            return res.json({data: staff.staffers[i]});
         }
     }
     if(!staff.staffers[i]) {
